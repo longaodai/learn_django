@@ -1,0 +1,19 @@
+<div class="row text-center mt-5">
+    <div class="col-md-12">
+        {% if messages %}
+        <ul class="messages ">
+            {% for message in messages %}
+            {% if message.tags == "error"%}
+            <span class="text-danger">
+            {{ message }}
+        </span>
+            {% else %}
+            <span class="text-success">
+            {{ message }}
+        </span>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+</div>
